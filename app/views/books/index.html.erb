@@ -1,4 +1,18 @@
 <div>
-  <h1 class="font-bold text-4xl">Books#index</h1>
-  <p>Find me in app/views/books/index.html.erb</p>
+  <h1>Books</h1>
+
+  <div>
+    <ul>
+      <% @books.each do |book| %>
+        <li><%= book.cover %></li>
+        <li><%= book.title %></li>
+        <li><%= book.author %></li>
+        <li><%= book.description %></li>
+        <li><%= book.genre %></li>
+        <li><%= book.publish_company %></li>
+        <li><%= book.page %></li>
+        <li><%= book.year_publish %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>
