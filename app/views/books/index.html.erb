@@ -1,18 +1,37 @@
 <div>
   <h1>Books</h1>
-
+  <%= link_to "New Book", new_book_path %>
   <div>
-    <ul>
-      <% @books.each do |book| %>
-        <li><%= book.cover %></li>
-        <li><%= book.title %></li>
-        <li><%= book.author %></li>
-        <li><%= book.description %></li>
-        <li><%= book.genre %></li>
-        <li><%= book.publish_company %></li>
-        <li><%= book.page %></li>
-        <li><%= book.year_publish %></li>
-      <% end %>
-    </ul>
-  </div>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Cover</th>
+          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Title</th>
+          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Author</th>
+          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">description</th>
+          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Genre</th>
+          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">publish_company</th>
+          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">page</th>
+          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">year_publish</th>
+          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">link</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @books.each do |book| %>
+          <tr>
+            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.cover %></td>
+            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.title %></td>
+            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.author %></td>
+            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap truncate"><%= book.description %></td>
+            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.genre %></td>
+            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.publish_company %></td>
+            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.page %></td>
+            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.year_publish %></td>
+            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= link_to "Show", book %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </div>
+  </table>
 </div>
