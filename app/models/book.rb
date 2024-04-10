@@ -1,4 +1,7 @@
 class Book < ApplicationRecord
+
+  belongs_to :book_current
+
   validates :cover, presence: true
   validates :title, presence: true
   validates :author, presence: true

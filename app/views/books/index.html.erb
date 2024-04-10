@@ -19,7 +19,7 @@
       <tbody>
         <% @books.each do |book| %>
           <tr>
-            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.cover %></td>
+            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= image_tag book.cover %></td>
             <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.title %></td>
             <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.author %></td>
             <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap truncate"><%= book.description %></td>
