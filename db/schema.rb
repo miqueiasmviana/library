@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_09_182632) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_10_200002) do
+  create_table "book_currents", force: :cascade do |t|
+    t.string "current_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "books", force: :cascade do |t|
     t.string "cover"
     t.string "title"
@@ -22,6 +28,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_09_182632) do
     t.integer "year_publish"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "book_current_id"
+    t.index ["book_current_id"], name: "index_books_on_book_current_id"
   end
 
+  add_foreign_key "books", "book_currents"
 end
