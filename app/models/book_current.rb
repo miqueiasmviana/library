@@ -1,0 +1,2 @@
+class BookCurrent < ApplicationRecord
+end

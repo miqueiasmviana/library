@@ -1,0 +1,2 @@
+module BookCurrentHelper
+end
