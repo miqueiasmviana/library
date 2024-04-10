@@ -35,6 +35,13 @@ class BookCurrentsController < ApplicationController
     end
   end
 
+  def destroy
+    @book_current = Book.find(params[:id])
+    @book_current.destroy
+
+    redirect_to book_current_path, status: :see_other
+  end
+
   private
 
   def book_current_params
