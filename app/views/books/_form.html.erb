@@ -3,7 +3,7 @@
 <%= form_with model: book do |form| %>
   <div>
     <%= form.label :cover %><br>
-    <%= form.text_area :cover %>
+    <%= form.text_field :cover %>
     <% book.errors.full_messages_for(:cover).each do |message| %>
       <div><%= message %></div>
     <% end %>

@@ -1,0 +1,11 @@
+<h1>New Type</h1>
+
+<%= form_with model: book_current do |form| %>
+  <div>
+    <%= form.label :current_type %>
+    <%= form.text_field :current_type %>
+    <% book_current.errors.full_messages_for(:current_type).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+<% end %>

@@ -13,8 +13,7 @@
           <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">publish_company</th>
           <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">page</th>
           <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">year_publish</th>
-          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">link</th>
-        </tr>
+          <th colspan="3"></th>
       </thead>
 
       <tbody>
@@ -28,6 +27,8 @@
             <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.publish_company %></td>
             <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.page %></td>
             <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.year_publish %></td>
+            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= link_to "Show", book %></td>
+            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= link_to "Edit", edit_book_path(book) %></td>
             <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= link_to "Show", book %></td>
           </tr>
         <% end %>
