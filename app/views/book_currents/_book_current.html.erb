@@ -1,0 +1,14 @@
+<div id="<%= dom_id book_current %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Current type:</strong>
+    <%= book_current.current_type %>
+  </p>
+
+  <div class="text-center">
+    <%= link_to t("links.edit"), edit_book_current_path(@book_current), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <div class="inline-block ml-2">
+      <%= button_to t("links.delete"), book_current_path(@book_current), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    </div>
+    <%= link_to t("links.back"), books_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </div>
+</div>

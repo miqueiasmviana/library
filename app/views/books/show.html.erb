@@ -1,27 +1,5 @@
 <div>
-  <h1><%= @book.title %>: </h1>
-  <p><%= image_tag @book.cover, size: "100x100" %></p>
-
-  <h2>Author</h2>
-  <p><%= @book.author %></p>
-
-  <h2>Description</h2>
-  <p><%= @book.description %></p>
-
-  <h2>Genre</h2>
-  <p><%= @book.genre %></p>
-
-  <h2>Publishing Company</h2>
-  <p><%= @book.publish_company %></p>
-
-  <h2>Page</h2>
-  <p><%= @book.page %></p>
-
-  <h2>Year Published</h2>
-  <p><%= @book.year_publish %></p>
-
-  <ul>
-    <li><%= link_to "Edit", edit_book_path(@book) %></li>
-    <li><%= link_to "Delete", book_path(@book), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
-  </ul>
+  
+  <%= render "book", book: @book %>
+  
 </div>

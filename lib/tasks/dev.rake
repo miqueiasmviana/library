@@ -25,9 +25,8 @@ namespace :dev do
           publish_company: "Oxford university Press",
           page: "343",
           year_publish: "2009",
-          book_current: BookCurrent.all.sample
+          book_current: BookCurrent.find(1)
           },
- 
  
           {
           cover: "https://m.media-amazon.com/images/I/51lRMYwP-4L.jpg",
@@ -38,7 +37,7 @@ namespace :dev do
           publish_company: "Rocco",
           page: "208",
           year_publish: "2011",
-          book_current: BookCurrent.all.sample
+          book_current: BookCurrent.find(1)
           },
  
  
@@ -56,7 +55,7 @@ namespace :dev do
           publish_company: "WMF Martins Fontes",
           page: "328",
           year_publish: "2013",
-          book_current: BookCurrent.all.sample
+          book_current: BookCurrent.find(1)
           },
  
  
@@ -82,7 +81,7 @@ namespace :dev do
           publish_company: "Arqueiro",
           page: "656",
           year_publish: "2007",
-          book_current: BookCurrent.all.sample
+          book_current: BookCurrent.find(1)
           },
  
           {
@@ -104,7 +103,7 @@ namespace :dev do
           publish_company: "Editora Arqueiro",
           page: "960",
           year_publish: "2011",
-          book_current: BookCurrent.all.sample
+          book_current: BookCurrent.find(1)
           },
 
           {
@@ -128,7 +127,7 @@ namespace :dev do
           publish_company: "Editora Arqueiro",
           page: "144",
           year_publish: "2014",
-          book_current: BookCurrent.all.sample
+          book_current: BookCurrent.find(1)
           },
 
           {
@@ -148,7 +147,7 @@ namespace :dev do
           publish_company: "HarperCollins",
           page: "576",
           year_publish: "2019",
-          book_current: BookCurrent.all.sample
+          book_current: BookCurrent.find(1)
           },
 
           {
@@ -160,7 +159,7 @@ namespace :dev do
           publish_company: "HarperCollins",
           page: "464",
           year_publish: "2019",
-          book_current: BookCurrent.all.sample
+          book_current: BookCurrent.find(1)
           },
 
           {
@@ -176,7 +175,7 @@ namespace :dev do
           publish_company: "HarperCollins",
           page: "528",
           year_publish: "2019",
-          book_current: BookCurrent.all.sample
+          book_current: BookCurrent.find(1)
           },
 
           {
@@ -190,7 +189,7 @@ namespace :dev do
           publish_company: "HarperCollins",
           page: "496",
           year_publish: "2019",
-          book_current: BookCurrent.all.sample
+          book_current: BookCurrent.find(1)
           }
           ]
 
