@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'book_current/index'
-  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root "books#index"
 
+  resources :book_currents
   resources :books
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
