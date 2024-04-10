@@ -1,38 +1,55 @@
-<div>
-  <h1>Books</h1>
-  <%= link_to "New Book", new_book_path %>
-  <div>
-    <table>
-      <thead>
-        <tr>
-          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Cover</th>
-          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Title</th>
-          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Author</th>
-          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">description</th>
-          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Genre</th>
-          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">publish_company</th>
-          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">page</th>
-          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">year_publish</th>
-          <th colspan="3"></th>
-      </thead>
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
 
-      <tbody>
-        <% @books.each do |book| %>
-          <tr>
-            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= image_tag book.cover %></td>
-            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.title %></td>
-            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.author %></td>
-            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap truncate"><%= book.description %></td>
-            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.genre %></td>
-            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.publish_company %></td>
-            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.page %></td>
-            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= book.year_publish %></td>
-            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= link_to "Show", book %></td>
-            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= link_to "Edit", edit_book_path(book) %></td>
-            <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= link_to "Show", book %></td>
-          </tr>
-        <% end %>
-      </tbody>
+  <div id="books" class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
+    <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
+      <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+        <div class="overflow-hidden">
+            <div class="flex justify-between items-center">
+              <%= link_to t("links.back"), welcome_index_path, class: "rounded-lg py-3 px-5 bg-white-600 text-black block font-medium border hover:bg-gray-100" %>
+              <h1 class="font-bold text-4xl"><%= t("messages.books") %></h1>              
+              <%= link_to t("new.book"), new_book_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium hover:bg-blue-500" %>
+            </div>
+
+          <table class="table table-hover w-full my-3">
+            <thead class="bg-gray-200 border-b">
+              <tr class="grid grid-cols-12 gap-3">
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left"><%= @books.human_attribute_name(:cover) %></th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left"><%= @books.human_attribute_name(:title) %></th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left"><%= @books.human_attribute_name(:author) %></th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left"><%= @books.human_attribute_name(:description) %></th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left"><%= @books.human_attribute_name(:genre) %></th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left"><%= @books.human_attribute_name(:publish_company) %></th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left"><%= @books.human_attribute_name(:page) %></th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left"><%= @books.human_attribute_name(:year_publish) %></th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left"><%= @books.human_attribute_name(:current_type) %></th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @books.each do |book| %>
+                <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100 grid grid-cols-12 gap-3">
+                  <td class="text-sm text-gray-900 font-light text-center whitespace-pre-wrap break-words"><%= image_tag book.cover, size: "50x50", class: "block w-32 mx-auto"%></td>
+                  <td class="text-sm text-gray-900 font-light px-1 py-4 break-words"><%= book.title %></td>
+                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-pre-wrap break-words"> <%= book.author %> </td>
+                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap truncate"><%= book.description %></td>
+                  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-pre-wrap break-words"> <%= book.genre %> </td>
+                  <td class="text-sm text-gray-900 font-light px-4 py-4 whitespace-pre-wrap break-words"> <%= book.publish_company %> </td>
+                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-pre-wrap break-words"> <%= book.page %> </td>
+                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-pre-wrap break-words"> <%= book.year_publish %> </td>
+                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-pre-wrap break-words"> <%= book.book_current.current_type %> </td>
+                  <td class="text-sm text-blue-500 font-light px-2 py-4 whitespace-pre-wrap hover:text-blue-800"><%= link_to t('links.show'), book %></td>
+                  <td class="text-sm text-blue-500 font-light px-6 py-4 whitespace-pre-wrap hover:text-blue-800"><%= link_to t('links.edit'), edit_book_path(book) %></td>
+                  <td class="text-sm text-blue-500 font-light px-6 py-4 whitespace-pre-wrap hover:text-blue-800"><%= link_to t('links.delete'), book %></td>
+                </tr>
+              <% end %>         
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-  </table>
+  </div>
 </div>
