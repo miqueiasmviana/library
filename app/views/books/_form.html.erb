@@ -1,71 +1,69 @@
-<h1>New Book</h1>
-
 <%= form_with model: book do |form| %>
-  <div class="field">
+  <div class="my-5">
     <%= form.label :cover %><br>
-    <%= form.text_field :cover %>
+    <%= form.text_field :cover, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
     <% book.errors.full_messages_for(:cover).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div> 
 
-  <div class="field">
+  <div class="my-5">
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
     <% book.errors.full_messages_for(:title).each do |message| %>
       <div> <%= message %> </div>
     <% end %>
   </div> 
 
-  <div class="field">
+  <div class="my-5">
     <%= form.label :author %><br>
-    <%= form.text_field :author %>
+    <%= form.text_field :author, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
     <% book.errors.full_messages_for(:author).each do |message| %>
       <div> <%= message %> </div>
     <% end %>
   </div> 
 
-  <div class="field">
+  <div class="my-5">
     <%= form.label :description %><br>
-    <%= form.text_field :description %>
+    <%= form.text_field :description, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
     <% book.errors.full_messages_for(:description).each do |message| %>
       <div> <%= message %> </div>
     <% end %>
   </div> 
 
-  <div class="field">
+  <div class="my-5">
     <%= form.label :genre %><br>
-    <%= form.text_field :genre %>
+    <%= form.text_field :genre, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
     <% book.errors.full_messages_for(:genre).each do |message| %>
       <div> <%= message %> </div>
     <% end %>
   </div> 
 
-  <div class="field">
+  <div class="my-5">
     <%= form.label :publish_company %><br>
-    <%= form.text_field :publish_company %>
+    <%= form.text_field :publish_company, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
     <% book.errors.full_messages_for(:publish_company).each do |message| %>
       <div> <%= message %> </div>
     <% end %>
   </div> 
 
-  <div class="field">
+  <div class="my-5">
     <%= form.label :page %><br>
-    <%= form.text_field :page %>
+    <%= form.text_field :page, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
     <% book.errors.full_messages_for(:page).each do |message| %>
       <div> <%= message %> </div>
     <% end %>
   </div> 
 
-  <div class="field">
+  <div class="my-5">
     <%= form.label :year_publish %><br>
-    <%= form.text_field :year_publish %>
+    <%= form.text_field :year_publish, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
     <% book.errors.full_messages_for(:year_publish).each do |message| %>
       <div> <%= message %> </div>
     <% end %>
   </div>
 
-  <div class="field px-3 py-3">
+  <div class="my-5 px-3 py-3">
     <%= form.label :book_current_id %>
     <%= form.select("book_current_id", @book_current_options, {include_blank: t("messages.select") }) %>
   </div>

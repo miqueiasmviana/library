@@ -1,0 +1,32 @@
+pt-BR:
+    current_locale: "English (International)"
+    messages:
+      author: Autor
+      book: Livro
+      books: Livros
+      current_reading: Leitura Atual
+      description: Descrição
+      finished_book: Livros Lidos
+      genre: Genero
+      list_want: Lista de livros que eu quero ler
+      list_current: Lista de livros que eu estou lendo
+      list_finished: Lista de livros que eu terminei de ler
+      title: Titulo
+      page: Páginas
+      publish_company: Editora
+      publish_year: Ano de Publicação
+      welcome: Minha Biblioteca
+      want_to_read: Eu quero ler
+    links:
+      want_to_read: Eu quero ler
+      current_reading: Leitura atual
+      finished: Finalizados
+      edit: Editar
+      show: Mostras
+      delete: Deletar
+      new: Novo
+      back: Voltar
+      my_book: Meus Livros
+    new:
+      book: "Novo Livro"
+      book_current: "New Book Current"

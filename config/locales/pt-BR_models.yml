@@ -1,0 +1,26 @@
+'pt-BR':
+  activerecord:
+    models:
+      book: 
+        one: Livro
+        other: Livros
+      book_current: 
+        one: Livro Atual
+        other: Livros Atuais
+    attributes:
+      book:
+        id: Código
+        cover: Capa
+        title: Título
+        author: Autor
+        description: Descrição
+        genre: Gênero
+        publish_company: Editora
+        page: Páginas
+        year_publish: Ano de Publicação
+        current_type: Status
+        updated_at: Atualizado em
+        created_at: Criado em
+      book_current:
+        id: Código
+        current_type: Status
