@@ -1,4 +1,21 @@
-<div>
-  <h1 class="font-bold text-4xl">CurrentReading#index</h1>
-  <p>Find me in app/views/current_reading/index.html.erb</p>
+<div class="bg-white mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl lg:mx-0">
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"><%= t("messages.current_reading") %></h2>
+    <p class="mt-2 text-lg leading-8 text-gray-600"><%= t("messages.list_current") %></p>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 mt-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+    <% @current_readings.each do |current_reading| %>
+      <a href="<%= book_path(current_reading) %>"> 
+        <div class="flex flex-col items-center"> 
+          <%= image_tag current_reading.cover, size: "50x50", class: "block w-32 mx-auto mb-2" %> 
+          <p class="text-sm text-center text-gray-800"><%= current_reading.title %></p>
+        </div>
+      </a>
+    <% end %>
+  </div>
+
+  <div class="flex justify-between items-center gap-4 mt-8 ">
+    <%= link_to t("links.back"), root_path, class: "rounded-lg py-3 px-5 bg-white-600 text-black block font-medium border hover:bg-gray-100" %>
+  </div>
 </div>

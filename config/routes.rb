@@ -2,14 +2,12 @@ Rails.application.routes.draw do
   get 'finished/index'
   get 'current_reading/index'
   get 'want_to_read/index'
-  
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  root "welcome#index"
-
-
   get 'welcome/index'
   resources :book_currents
   resources :books
+
+  root "welcome#index"
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
