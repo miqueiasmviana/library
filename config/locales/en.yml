@@ -35,18 +35,18 @@ en:
     books: Books
     confirm: Are you Sure?
     current_reading: Current Reading
+    finished: Finished Books
+    want_to_read: I Want to Read
     description: Description
-    finished_book: Finished Books
     genre: Genre
-    list_want: List of Books I want to read
-    list_current: List of Books you are reading
+    list_want_to_read: List of Books I want to read
+    list_current_reading: List of Books you are reading
     list_finished: List of Books I Finished Reading
     title: Title
     page: Pages
     publish_company: Publishing Company
     publish_year: Year Published
     welcome: My Lybrary
-    want_to_read: I Want to Read
   links:
     want_to_read: I Want to Read
     current_reading: Current Reading

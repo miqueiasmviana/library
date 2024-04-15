@@ -6,18 +6,18 @@ pt-BR:
       books: Livros
       confirm: Tem Certeza?
       current_reading: Leitura Atual
+      want_to_read: Eu quero ler
+      finished: Livros Lidos
       description: Descrição
-      finished_book: Livros Lidos
       genre: Genero
-      list_want: Lista de livros que eu quero ler
-      list_current: Lista de livros que eu estou lendo
+      list_want_to_read: Lista de livros que eu quero ler
+      list_current_reading: Lista de livros que eu estou lendo
       list_finished: Lista de livros que eu terminei de ler
       title: Titulo
       page: Páginas
       publish_company: Editora
       publish_year: Ano de Publicação
       welcome: Minha Biblioteca
-      want_to_read: Eu quero ler
     links:
       want_to_read: Eu quero ler
       current_reading: Leitura atual

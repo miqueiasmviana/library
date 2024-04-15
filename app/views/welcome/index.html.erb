@@ -4,18 +4,18 @@
             <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"><%= t("messages.welcome") %></h1>
             <%# <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p> %>
             
-            <%= link_to want_to_read_index_path, class:"inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" do %>
+            <%= link_to readings_index_path(type: 'Want to Read'), class:"inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" do %>
             <%= t("links.want_to_read") %>
             <% end %> 
-            <%= link_to current_reading_index_path, class:"inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" do %>
+            <%= link_to readings_index_path(type: 'Current Reading'), class:"inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" do %>
             <%= t("links.current_reading") %>
             <% end %> 
-            <%= link_to finished_index_path, class:"inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" do %>
+            <%= link_to readings_index_path(type: 'Finished'), class:"inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" do %>
             <%= t("links.finished") %>
             <% end %> 
         </div>
         <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="https://s3.us-east-2.amazonaws.com/poetry-tpf-production/uploads/contentImages/_1200x630_crop_center-center_82_none/Harriet-Books-SEO.png?mtime=1619639579" alt="mockup">
+            <img src="https://images.vexels.com/media/users/3/229083/isolated/preview/5f5f67d6a035e0214735fe9a2281601e-logotipo-do-balao-de-fala-do-livro.png" alt="mockup">
         </div>                
     </div>
 </section>

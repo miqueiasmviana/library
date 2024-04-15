@@ -1,19 +1,14 @@
 class BookCurrentsController < ApplicationController
+  before_action :set_book_current, only: [:show, :edit, :update, :destroy]
+
   def index
     @book_currents = BookCurrent.all
   end
 
-  def show
-    @book_current = BookCurrent.find(params[:id])
-  end
+  def show; end
 
   def new
-
-    
-
     @book_current = BookCurrent.new
-
-
   end
 
   def create
@@ -26,13 +21,9 @@ class BookCurrentsController < ApplicationController
     end
   end
 
-  def edit
-    @book_current = BookCurrent.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @book_current = BookCurrent.find(params[:id])
-
     if @book_current.update(book_current_params)
       redirect_to @book_current
     else
@@ -41,13 +32,16 @@ class BookCurrentsController < ApplicationController
   end
 
   def destroy
-    @book_current = Book.find(params[:id])
     @book_current.destroy
 
     redirect_to book_current_path, status: :see_other
   end
 
   private
+
+  def set_book_current
+    @book_current = BookCurrent.find(params[:id])
+  end
 
   def book_current_params
     params.require(:book_current).permit(:current_type)

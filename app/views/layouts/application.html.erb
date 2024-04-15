@@ -40,10 +40,11 @@
           </div>
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-4">
-                <%= link_to root_path, class: "bg-gray-900 text-gray-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium" do %>
-                  BookJourney
+              <div class="flex items-center justify-center space-x-4">
+                <%= link_to root_path, class: "text-gray-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium" do %>
+                  <%= image_tag "https://images.vexels.com/media/users/3/229083/isolated/preview/5f5f67d6a035e0214735fe9a2281601e-logotipo-do-balao-de-fala-do-livro.png", size: "50x50" %>
                 <% end %>
+               
                 <%= link_to books_path, class: "text-gray-300 hover:white-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" do %>
                 <%= t("links.my_book") %>
                 <% end %>

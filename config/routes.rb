@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'finished/index'
-  get 'current_reading/index'
-  get 'want_to_read/index'
+  get 'readings/index'
   get 'welcome/index'
   resources :book_currents
   resources :books
