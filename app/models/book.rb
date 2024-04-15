@@ -10,5 +10,6 @@ class Book < ApplicationRecord
   validates :publish_company, presence: true
   validates :page, presence: true
   validates :year_publish, presence: true
+  validates :book_current_id, presence: true
 end
 

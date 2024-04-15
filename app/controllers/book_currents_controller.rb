@@ -8,7 +8,12 @@ class BookCurrentsController < ApplicationController
   end
 
   def new
+
+    
+
     @book_current = BookCurrent.new
+
+
   end
 
   def create

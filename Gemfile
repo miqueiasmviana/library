@@ -4,6 +4,7 @@ ruby "3.2.0"
 
 gem "tty-spinner"
 gem 'rails-i18n', '~> 7.0.0' 
+gem 'byebug', '~> 9.0', '>= 9.0.6'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.2"

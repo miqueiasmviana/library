@@ -19,9 +19,9 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-
+  
     if @book.save
-      redirect_to @book
+      redirect_to @book, notice: "Book was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -31,7 +31,6 @@ class BooksController < ApplicationController
   end
 
   def update
-
     if @book.update(book_params)
       redirect_to @book
     else
@@ -42,7 +41,7 @@ class BooksController < ApplicationController
   def destroy
     @book.destroy
 
-    redirect_to book_path, status: :see_other
+    redirect_to books_url, notice: "Book was successfully destroyed."
   end
 
   private
