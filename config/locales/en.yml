@@ -33,6 +33,7 @@ en:
     author: Author
     book: Book
     books: Books
+    confirm: Are you Sure?
     current_reading: Current Reading
     description: Description
     finished_book: Finished Books

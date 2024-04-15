@@ -43,7 +43,7 @@
                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-pre-wrap break-words"> <%= book.book_current.current_type %> </td>
                   <td class="text-sm text-blue-500 font-light px-2 py-4 whitespace-pre-wrap hover:text-blue-800"><%= link_to t('links.show'), book %></td>
                   <td class="text-sm text-blue-500 font-light px-6 py-4 whitespace-pre-wrap hover:text-blue-800"><%= link_to t('links.edit'), edit_book_path(book) %></td>
-                  <td class="text-sm text-blue-500 font-light px-6 py-4 whitespace-pre-wrap hover:text-blue-800"><%= link_to t('links.delete'), book %></td>
+                  <td class="text-sm text-blue-500 font-light px-6 py-4 whitespace-pre-wrap hover:text-blue-800"><%= link_to t('links.delete'), book, data: {turbo_method: :delete, turbo_confirm: t("messages.confirm")} %></td>
                 </tr>
               <% end %>         
             </tbody>
