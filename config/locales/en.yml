@@ -39,6 +39,7 @@ en:
     want_to_read: I Want to Read
     description: Description
     genre: Genre
+    error_message: "prohibited this book from being saved:"
     list_want_to_read: List of Books I want to read
     list_current_reading: List of Books you are reading
     list_finished: List of Books I Finished Reading
@@ -46,6 +47,7 @@ en:
     page: Pages
     publish_company: Publishing Company
     publish_year: Year Published
+    select: "Select..."
     welcome: My Lybrary
   links:
     want_to_read: I Want to Read

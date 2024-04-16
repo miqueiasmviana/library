@@ -9,6 +9,7 @@ pt-BR:
       want_to_read: Eu quero ler
       finished: Livros Lidos
       description: Descrição
+      error_message: "proibiu que este livro fosse salvo:"
       genre: Genero
       list_want_to_read: Lista de livros que eu quero ler
       list_current_reading: Lista de livros que eu estou lendo
@@ -17,6 +18,7 @@ pt-BR:
       page: Páginas
       publish_company: Editora
       publish_year: Ano de Publicação
+      select: "Selecione..."
       welcome: Minha Biblioteca
     links:
       want_to_read: Eu quero ler
