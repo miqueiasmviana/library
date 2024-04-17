@@ -19,6 +19,8 @@ pt-BR:
       publish_company: Editora
       publish_year: Ano de Publicação
       select: "Selecione..."
+      search: "Pesquisar"
+      search_book: "Pesquise por um livro:"
       welcome: Minha Biblioteca
     links:
       want_to_read: Eu quero ler

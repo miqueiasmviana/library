@@ -13,6 +13,16 @@
               <%= link_to t("new.book"), new_book_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium hover:bg-blue-500" %>
             </div>
 
+            <br>
+
+            <div class="flex justify-center items-center">
+              <%= form_with url: books_path, method: :get do |form| %>
+                <%= form.label :query, t("messages.search_book") %>
+                <%= form.text_field :query, class: "rounded-lg py-3 px-5 font-medium" %>
+                <%= form.submit t("messages.search"), class: "rounded-lg py-3 px-5 bg-blue-600 text-white font-medium hover:bg-blue-500" %>
+              <% end %>
+            </div>
+
           <table class="table table-hover w-full my-3">
             <thead class="bg-gray-200 border-b">
               <tr class="grid grid-cols-12 gap-3">

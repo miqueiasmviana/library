@@ -48,6 +48,8 @@ en:
     publish_company: Publishing Company
     publish_year: Year Published
     select: "Select..."
+    search: "Search"
+    search_book: "Search for a book:"
     welcome: My Lybrary
   links:
     want_to_read: I Want to Read
